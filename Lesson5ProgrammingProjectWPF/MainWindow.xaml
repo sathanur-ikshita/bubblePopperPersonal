@@ -1,0 +1,31 @@
+﻿<Window x:Class="Lesson5ProgrammingProjectWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lesson5ProgrammingProjectWPF"
+        mc:Ignorable="d"
+        Title="Bubble Popper" Height="450" Width="800" ResizeMode="NoResize">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Game">
+                <MenuItem x:Name="newMenu" Header="_New" Click="MenuItem_Click"/>
+                <MenuItem x:Name="settingsMenu" Header="_Settings" Click="Settings_MenuItem_Click_1"/>
+                <Separator/>
+                <MenuItem x:Name="quitMenu" Header="_Quit" Click="quitMenu_Click"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Background="PaleTurquoise">
+            <Canvas x:Name="gameCanvas">
+                <Label x:Name="labelTimer" Content="Timer: " VerticalAlignment="Top" Canvas.Left="475" Canvas.Top="-22" FontWeight="Bold"/>
+                <Label x:Name="labelScore" Content="Score: " VerticalAlignment="Top" Canvas.Left="560" Canvas.Top="-22" FontWeight="Bold"/>
+                <Label x:Name="labelHighScore" Content="High Score: " VerticalAlignment="Top" Canvas.Left="635" Canvas.Top="-22" FontWeight="Bold"/>
+                <Button Content="99" Canvas.Left="271" Canvas.Top="155" Width="35" Height="40" FontWeight="Bold" Style="{DynamicResource ButtonStyleNoMouseOver}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Resources/SmallBubble.png"/>
+                    </Button.Background>
+                </Button>
+            </Canvas>
+        </StackPanel>
+    </DockPanel>
+</Window>
